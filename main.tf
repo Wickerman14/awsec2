@@ -35,8 +35,13 @@ resource "aws_subnet" "main" {
   
   }
 
-output "subnet id" {
+  output "subnet id" {
   value = aws_subnet.main.*.id
+
+ # output "subnet_ids" {
+ # value       = coalescelist(aws_subnet.private.*.id, aws_subnet.public.*.id)
+ # description = "Subnet IDs"
+}
   
 }
 }
