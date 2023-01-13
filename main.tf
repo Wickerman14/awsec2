@@ -34,6 +34,11 @@ resource "aws_subnet" "main" {
     Name = lookup(var.awsprops, "subnet")
   
   }
+
+output "subnet id" {
+  value = aws_vpc.mainvpc.id
+  
+}
 }
 resource "aws_security_group" "project-iac-sg" {
   name = lookup(var.awsprops, "secgroupname")
