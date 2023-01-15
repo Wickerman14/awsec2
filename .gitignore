@@ -6,3 +6,4 @@ Homestead.json
 .idea/workspace.xml
 /config/test
 /storage/logs/laravel.log
+kill.me
